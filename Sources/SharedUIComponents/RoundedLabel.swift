@@ -7,13 +7,15 @@
 
 import UIKit
 
-final class RoundedLabel: UILabel {
+final
+public class RoundedLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.layer.cornerRadius = 15
+        self.layer.cornerRadius = 8
         self.backgroundColor = .blue
         self.textColor = .yellow
+        self.clipsToBounds = true
     }
     
     required init?(coder: NSCoder) {
